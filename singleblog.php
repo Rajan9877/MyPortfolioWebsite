@@ -45,6 +45,20 @@ if(mysqli_num_rows($result)>0){
         }
         .comment-box{
             display: flex;
+            flex-direction: column;
+        }
+        #formMessage{
+            position: fixed;
+            top: 100px;
+            right: 15px;
+            background-color: #0BCEAF;
+            z-index: 1;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: none;
+        }
+        .users{
+          display: flex;
         }
     </style>
 </head>
@@ -72,7 +86,6 @@ if(mysqli_num_rows($result)>0){
 </div>
 </div>
 
-
 <?php
 
 }
@@ -81,42 +94,36 @@ if(mysqli_num_rows($result)>0){
 ?>
 
 <div class="container my-3">
+<div id="formMessage">
+        Message Submitted Successfully!
+    </div>
+
     <h3 style="color: #0BCEAF;">Comment : </h3>
 <form id="contactForm" method="post">
     <div class="form-group">
+      <input type="hidden" class="form-control" id="blogid" name="blogid" value="<?php echo $_GET["id"]; ?>">
+    </div>
+    <div class="form-group">
       <label for="name" class="my-1">Name :</label>
-      <input style="border-radius: 50px;" type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+      <input style="border-radius: 50px;" type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
     </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="my-1">Email : </label>
-    <input style="border-radius: 50px;" type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+    <label for="email" class="my-1">Email : </label>
+    <input style="border-radius: 50px;" type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Your Email" required>
 </div>
   <div class="form-group">
     <label for="comment" class="my-1">Comment : </label>
-    <textarea style="border-radius: 50px; padding-top: 87px;" name="comment" rows="5" class="form-control" id="comment" placeholder="Enter Your Comment"></textarea>
+    <textarea style="border-radius: 50px; padding-top: 87px;" name="comment" rows="5" class="form-control" id="comment" placeholder="Enter Your Comment" required></textarea>
 </div>
   <button type="submit" style="background-color: #0BCEAF !important; border: 2px solid #0BCEAF; cursor: pointer; border-radius: 50px;" class="btn btn-primary my-2">Post Comment</button>
 </form>
 </div>
 
 <div class="container">
-    <h3>Comments()</h3>
+    <h3>Comments(<span class="comment-count"></span>)</h3>
     <hr>
-    <div class="comment-box">
-    <div class="left">
-        <img src="img/user.png" alt="User" width="50px">
-    </div>
-    <div class="right">
-    <div class="card text-center">
-  <div class="card-header">
-    <div><h5>Username</h5> Date</div>
-    
-  </div>
-  <div class="card-body">
-    <p class="card-text">Comment</p>
-  </div>
-</div>
-    </div>
+    <div class="comment-box user-list">
+  
     </div>
 </div>
     <!-- Footer Start -->
@@ -140,30 +147,63 @@ if(mysqli_num_rows($result)>0){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
-         $(document).ready(function () {
-  $("#contactForm").submit(function (event) {
-    var formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      subject: $("#comment").val(),
-    };
+        $(document).ready(function() {
+            var blogid = <?php echo (int)$_GET['id']; ?>;
+            // Function to fetch comments and display them on the page
+            function fetchComments() {
+                $.ajax({
+                    url: 'commentread.php',
+                    type: 'GET',
+                    data: {
+                        blogid: blogid
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                      $('.comment-count').html(Object.keys(data).length);
+                        // Process the data and display it on the page
+                        var userList = $('.user-list');
+                        userList.empty(); // Clear existing comments
+                        $.each(data, function(index, user) {
+                            userList.append('<div class="users my-2"><div class="left"><img src="img/user.png" alt="User" width="50px"></div><div class="right"><div class="card"><div class="card-header"><div><span style="font-weight: bold; font-size: 20px;">'+user.name+'</span> '+user.date+'</div></div><div class="card-body"><p class="card-text">'+user.comment+'</p></div></div></div></div>');
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error occurred while fetching data: " + error);
+                    }
+                });
+            }
 
-    $.ajax({
-      type: "POST",
-      url: "comment.php",
-      data: formData,
-    }).done(function (data) {
-        $("#contactForm").trigger("reset");
-        $("#formMessage").html(data)
-        $("#formMessage").fadeIn();
-        setTimeout(function () {
-            $("#formMessage").fadeOut();
-        }, 3000);
-    });
+            // Initial call to fetch comments on page load
+            fetchComments();
 
-    event.preventDefault();
-  });
-});
+            // Submit the form via AJAX
+            $("#contactForm").submit(function (event) {
+                var formData = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    comment: $("#comment").val(),
+                    blogid: $("#blogid").val()
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "comment.php",
+                    data: formData,
+                }).done(function (data) {
+                    $("#contactForm").trigger("reset");
+                    $("#formMessage").html(data);
+                    $("#formMessage").fadeIn();
+                    setTimeout(function () {
+                        $("#formMessage").fadeOut();
+                    }, 3000);
+
+                    // After submitting the form, fetch updated comments and display them
+                    fetchComments();
+                });
+
+                event.preventDefault();
+            });
+        });
     </script>
 </body>
 </html>

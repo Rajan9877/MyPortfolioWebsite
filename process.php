@@ -16,6 +16,13 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
+// if($name === '' || $email === '' || $subject ==='' || $message === ''){
+//     echo'<span class="text-danger">
+//     All fields are required!
+//   </span>';
+//     return;
+// }
+
 $sql = "INSERT INTO `message` (`name`, `email`, `subject`, `message`) VALUES ('$name', '$email', '$subject', '$message')";
 $result = mysqli_query($conn, $sql);
 if($result){

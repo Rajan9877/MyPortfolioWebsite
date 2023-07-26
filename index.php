@@ -35,6 +35,12 @@
             border-radius: 50px;
             display: none;
         }
+        #image::file-selector-button{
+            background-color: #0BCEAF;
+            border: 2px solid #0BCEAF;
+            border-radius: 50px;
+            color: white;
+        }
     </style>
 </head>
 
@@ -62,7 +68,7 @@
                 <a href="#blog" class="nav-item nav-link">Blog</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -141,8 +147,8 @@
                         <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">H.No. 131 Paras Estate Leather Complex Jalandhar, Punjab</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
                     </div>
-                    <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="" class="btn btn-outline-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-outline-primary mr-4">Hire Me</a>
+                    <a href="https://www.google.com/search?q=rajan+joriya&oq=rajan&aqs=chrome.0.35i39j46i67i433i650j69i60l6.19456j0j7&sourceid=chrome&ie=UTF-8" class="btn btn-outline-primary">Know More</a>
                 </div>
             </div>
         </div>
@@ -477,61 +483,43 @@
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-1.png" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                            <!-- <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                            </a> -->
+                            <div class="hover-buttons">
+                            <a href="img/portfolio-1.png" data-lightbox="portfolio" class="btn btn-sm btn-outline-light mx-1">View</a>
+                            <a href="http://rslearning.epizy.com" class="btn btn-sm btn-outline-light mx-1" target="_blank">Link</a>
+                        </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-2.png" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                            <!-- <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                            </a> -->
+                            <div class="hover-buttons">
+                            <a href="img/portfolio-2.png" data-lightbox="portfolio" class="btn btn-sm btn-outline-light mx-1">View</a>
+                            <a href="https://blogsofrajan.infinityfreeapp.com/" class="btn btn-sm btn-outline-light mx-1" target="_blank">Link</a>
+                        </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-3.png" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                            <!-- <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                            </a> -->
+                            <div class="hover-buttons">
+                            <a href="img/portfolio-3.png" data-lightbox="portfolio" class="btn btn-sm btn-outline-light mx-1">View</a>
+                            <a href="https://www.google.com/search?q=rajan+joriya&oq=&aqs=chrome.0.35i39i362l8.62635j0j7&sourceid=chrome&ie=UTF-8" class="btn btn-sm btn-outline-light mx-1">Link</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -548,9 +536,10 @@
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
                 <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
             </div>
+            <h3 style="text-align: center;">Clients can give <a id="reviewButton" href="#" style="text-decoration: none;">review</a> by clicking on review button</h3>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
+                    <div class="owl-carousel testimonial-carousel" id="reviewList">
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                             <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
@@ -579,6 +568,40 @@
     </div>
     <!-- Testimonial End -->
 
+    <!-- Hidden popup form -->
+<div id="reviewPopup" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Review Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="reviewForm" action="review.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input type="text" name="profession" class="form-control" id="profession" placeholder="Enter your profession">
+          </div>
+          <div class="form-group">
+            <label for="review">Review:</label>
+            <textarea class="form-control" name="review" id="review" rows="3" placeholder="Enter your review"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="profession">Image:</label><br>
+            <input type="file" id="image" name="image">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Blog Start -->
     <div class="container-fluid pt-5" id="blog">
@@ -599,7 +622,7 @@
                 if(!$conn){
                     die("Connection failed: ".mysqli_connect_error());
                 }
-                $sql1 = "SELECT * FROM `blogpost`";
+                $sql1 = "SELECT * FROM `blogpost` ORDER BY `date` DESC LIMIT 9";
                 $result1 = mysqli_query($conn , $sql1);
                 if ( mysqli_num_rows($result1) > 0 ) {
                     while( $row = mysqli_fetch_assoc($result1) ) {
@@ -671,25 +694,25 @@
                         <form method="post" name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                <input type="text" name="name" class="form-control p-4" id="name" placeholder="Your Name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                    <input type="email" name="email" class="form-control p-4" id="email" placeholder="Your Email"
                                         required="required" data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Subject"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
                                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
                                     required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
+                                    data-validation-required-message="Please enter your message" name="message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
@@ -709,10 +732,12 @@
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/_rajanjoriya" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://ms-my.facebook.com/rajan.rajanjoriya/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/rajan-joriya-3b034a20b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/joriyarajan/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mx-2" href="https://github.com/rajan9877"><i class="fab fa-github" target="_blank"></i></a>
+                <a class="btn btn-light btn-social" href="http://rslearning.epizy.com/" target="_blank"><i class="fa fa-link"></i></a>
             </div>
             <div class="d-flex justify-content-center mb-3">
             &#128540; Follow Me &#128540;
@@ -731,37 +756,18 @@
 
     <!-- Handling Form With Ajax -->
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-  $("#contactForm").submit(function (event) {
-    var formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      subject: $("#subject").val(),
-      message: $("#message").val(),
-    };
-
-    $.ajax({
-      type: "POST",
-      url: "process.php",
-      data: formData,
-    }).done(function (data) {
-        $("#contactForm").trigger("reset");
-        $("#formMessage").html(data)
-        $("#formMessage").fadeIn();
-        setTimeout(function () {
-            $("#formMessage").fadeOut();
-        }, 3000);
-    });
-
-    event.preventDefault();
-  });
-});
-    </script>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+  // JavaScript to handle the popup display
+  $(document).ready(function() {
+    // When the reviewButton is clicked, show the popup
+    $("#reviewButton").on("click", function() {
+      $("#reviewPopup").modal("show");
+    });
+  });
+</script>
     <script src="lib/typed/typed.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -775,6 +781,120 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+  $(document).ready(function() {
+    $("#contactForm").submit(function(event) {
+      // Prevent the default form submission behavior (page refresh)
+      event.preventDefault();
+
+      // Get form data
+      var formData = {
+        name: $("#name").val(),
+        email: $("#email").val(),
+        subject: $("#subject").val(),
+        message: $("#message").val()
+      };
+
+      // Send form data using AJAX
+      $.ajax({
+        type: "POST",
+        url: "process.php", // Make sure this points to the correct "process.php" file
+        data: formData,
+      }).done(function(data) {
+        // Reset the form and show the response message
+        $("#contactForm").trigger("reset");
+        $("#formMessage").html(data);
+        $("#formMessage").fadeIn();
+        setTimeout(function() {
+          $("#formMessage").fadeOut();
+        }, 3000);
+      });
+    });
+  });
+</script>
+<script>
+    $(document).ready(function (e) {
+        function fetchReviews() {
+                $.ajax({
+                    url: 'reviewread.php',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                    //   $('.comment-count').html(Object.keys(data).length);
+                        // Process the data and display it on the page
+                        // var reviewList = $('#reviewList');
+                        // reviewList.empty(); // Clear existing comments
+                        $('#reviewList').html('')
+                        $.each(data, function(index, user) {
+                            $('#reviewList').append('<div class="text-center"><i class="fa fa-3x fa-quote-left text-primary mb-4"></i><h4 class="font-weight-light mb-4">'+user.review+'</h4><img class="img-fluid rounded-circle mx-auto mb-3" src="'+user.image+'" style="width: 80px; height: 80px;"><h5 class="font-weight-bold m-0">'+user.name+'</h5><span>'+user.profession+'</span></div><hr>');
+                        });
+                          // Reinitialize the Owl Carousel after adding new content
+                    $('.testimonial-carousel').owlCarousel({
+                        items: 1,
+                        loop: true,
+                        nav: true,
+                        dots: false,
+                        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+                        autoplay: true,
+                        autoplayHoverPause: true
+                    });
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error occurred while fetching data: " + error);
+                    }
+                });
+            }
+
+            // Initial call to fetch comments on page load
+            fetchReviews();
+
+
+ $("#reviewForm").on('submit',(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: "review.php",
+   type: "POST",
+   data:  new FormData(this),
+   contentType: false,
+         cache: false,
+   processData:false,
+//    beforeSend : function()
+//    {
+//     //$("#preview").fadeOut();
+//     $("#err").fadeOut();
+//    },
+   success: function(data)
+      {
+    if(data=='invalid')
+    {
+     // invalid file format.
+     $("#err").html("Invalid File !").fadeIn();
+    }
+    else
+    {
+     // view uploaded file.
+    //  $("#preview").html(data).fadeIn();
+    $("#reviewForm").trigger("reset");
+    $("#reviewPopup").modal("hide");
+    fetchReviews();
+        $("#formMessage").html("<span style='color: green;'>Review Submitted Successfully!</span>");
+        $("#formMessage").fadeIn();
+        setTimeout(function() {
+          $("#formMessage").fadeOut();
+        }, 3000);
+    }
+      },
+     error: function(e) 
+      {
+    // $("#err").html(e).fadeIn();
+    console.log(e);
+      }          
+    });
+ }));
+});
+</script>
+
+
 </body>
 
 </html>

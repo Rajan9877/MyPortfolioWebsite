@@ -15,8 +15,16 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $comment = $_POST['comment'];
 $date = date("Y-m-d H:i:s");
+$blogid = $_POST['blogid'];
 
-$sql = "INSERT INTO `comment` (`name`, `email`, `comment`, `date`) VALUES ('$name', '$email', '$comment', '$date')";
+if($name == '' || $email == '' || $comment == ''){
+    echo'<span class="text-danger">
+    All fields are required!
+  </span>';
+    return;
+}
+
+$sql = "INSERT INTO `comments` (`name`, `email`, `comment`, `date`, `blogid`) VALUES ('$name', '$email', '$comment', '$date', '$blogid')";
 $result = mysqli_query($conn, $sql);
 if($result){
     echo('<span class="text-dark">Comment Posted Successfully!</span>');

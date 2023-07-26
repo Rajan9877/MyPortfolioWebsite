@@ -9982,3 +9982,34 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+
+
+/* Add this CSS in your stylesheet or <style> tag in <head> section */
+/* Add this CSS in your stylesheet or <style> tag in <head> section */
+
+/* Hide the hover buttons by default */
+.hover-buttons {
+  display: none;
+}
+
+/* Show the hover buttons when hovering over the portfolio item */
+.portfolio-item:hover .hover-buttons {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style the hover buttons */
+.hover-buttons a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #0BCEAF;
+}
+
+/* Add more custom styles as needed for the buttons */

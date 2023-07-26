@@ -98,7 +98,13 @@ if(!isset($_SESSION["email"])){
         $destination = $folder . $filename;
         $title = mysqli_real_escape_string($conn, $_POST["title"]); // Sanitize user input
         $description = mysqli_real_escape_string($conn, $_POST["description"]); // Sanitize user input
-
+        
+        if($title == '' || $description == '' || $filename == ''){
+            echo'<p class="text-danger">
+            All fields are required!
+          </p>';
+            return;
+        }
         // Verify the uploaded file is an image (you may add additional checks like file size and type)
         if (getimagesize($tempname) === false) {
         echo("<p style='color: red;'>Invalid file format. Only images are allowed.</p>");
